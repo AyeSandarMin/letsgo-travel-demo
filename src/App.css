@@ -1,0 +1,25 @@
+/* App.css - Custom video slider styles */
+.video-wrapper::before{
+    z-index: 777;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(14, 14, 15, 0.302);
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+  z-index: 1;
+}
+
+.video-slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: clip-path 2s ease;
+  z-index: 2;
+}
